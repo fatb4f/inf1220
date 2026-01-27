@@ -1,0 +1,32 @@
+[
+  {
+    "objective_id": "INF1220-TP1-O-01",
+    "type": "theory",
+    "title": "Early termination for thresholded sums",
+    "content": "When all array values are positive, you can decide whether the sum exceeds a threshold (here 100) without summing every element. Maintain a running total and stop as soon as total > 100. This is correct because adding more positive numbers can never reduce the total. This property supports efficiency on very large inputs: you may only need to read a small prefix of the array. Edge cases still matter: an empty array has sum 0, so the result is false; the algorithm must handle length 0 safely. The output should be a boolean (true/false)."
+  },
+  {
+    "objective_id": "INF1220-TP1-O-02",
+    "type": "theory",
+    "title": "Pseudocode contracts: inputs, variables, outputs",
+    "content": "In this course, pseudocode is meant to be read by humans. It should explicitly declare inputs, variables (with initial values), and outputs. Use clear control structures (IF, WHILE, FOR) and consistent naming. Avoid language-specific constructs (Java/Python syntax). Precision matters: ambiguous steps make execution traces impossible. A good test is whether a reader can execute the pseudocode line-by-line and obtain the same variable values you report."
+  },
+  {
+    "objective_id": "INF1220-TP1-O-03",
+    "type": "theory",
+    "title": "Execution traces as correctness evidence",
+    "content": "A rigorous trace lists each executed line in order and shows the value of every variable after that line. Traces reveal logical errors (wrong updates, wrong conditions, missing cases) and demonstrate that your algorithm behaves as claimed on concrete inputs. For loops or repeated steps, the trace must show each iteration unless you are explicitly permitted to summarize (TP1 permits summarization for the second problem due to many iterations)."
+  },
+  {
+    "objective_id": "INF1220-TP1-O-04",
+    "type": "theory",
+    "title": "Debugging conditionals: the FizzBuzz pitfall",
+    "content": "In the provided pseudocode, the conditional uses “IF divisible by 3 … ELSE IF divisible by 5 …”. That structure prevents printing both labels when a number is divisible by both 3 and 5 (e.g., 15). The correction is to check the combined case first (divisible by 3 AND 5), or to use two independent IF statements (print Fizz when divisible by 3; print Buzz when divisible by 5). The goal is logical correctness, not formatting."
+  },
+  {
+    "objective_id": "INF1220-TP1-O-05",
+    "type": "theory",
+    "title": "Comparing executions: original vs corrected logic",
+    "content": "To compare two algorithms, run them on the same range of inputs and highlight where outputs diverge. For the FizzBuzz case, differences occur exactly at numbers divisible by both 3 and 5: the original prints only one label, while the corrected version prints both (or prints “FizzBuzz”). When iteration counts are large, you can summarize by listing representative points (e.g., 3, 5, 15, 30, 45) and stating the general rule."
+  }
+]

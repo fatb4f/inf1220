@@ -1,0 +1,37 @@
+{
+  "manifest_id": "inf1220-tp1-material/v0.1.0",
+  "track": "inf1220",
+  "scope": "tp1",
+  "artifacts": [
+    {
+      "path": "cbia-content/inf1220/objectives/tp1.extracted.json",
+      "role": "objectives",
+      "schema": null
+    },
+    {
+      "path": "cbia-content/inf1220/objectives/objectives.dag.json",
+      "role": "objective_dag",
+      "schema": null
+    },
+    {
+      "path": "cbia-content/inf1220/material/tp1/theory/theory_blocks.json",
+      "role": "theory",
+      "schema": null
+    },
+    {
+      "path": "cbia-content/inf1220/material/tp1/drills/drill_blocks.json",
+      "role": "drills",
+      "schema": null
+    },
+    {
+      "path": "cbia-content/inf1220/material/tp1/flow/learning_flow.json",
+      "role": "flow",
+      "schema": null
+    },
+    {
+      "path": "cbia-content/inf1220/material/tp1/eval/eval_summary.json",
+      "role": "eval",
+      "schema": null
+    }
+  ]
+}

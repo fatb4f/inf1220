@@ -1,0 +1,68 @@
+[
+  {
+    "objective_id": "INF1220-TP1-O-01",
+    "type": "drill",
+    "format": "short-answer",
+    "prompt": "Why does early termination (stop when running_sum > 100) preserve correctness when all numbers are positive? State the key property used.",
+    "expected_focus": [
+      "monotonicity",
+      "positivity",
+      "correctness argument"
+    ]
+  },
+  {
+    "objective_id": "INF1220-TP1-O-01",
+    "type": "drill",
+    "format": "conceptual",
+    "prompt": "Write pseudocode (not Java/Python) that returns true if a positive array sum exceeds 100, reading as few elements as possible. Include the empty-array case.",
+    "expected_focus": [
+      "inputs/outputs",
+      "early stop",
+      "edge cases"
+    ]
+  },
+  {
+    "objective_id": "INF1220-TP1-O-02",
+    "type": "drill",
+    "format": "short-answer",
+    "prompt": "List the minimum sections your pseudocode should include (inputs, variables, outputs, etc.) and explain why each one matters for readability.",
+    "expected_focus": [
+      "contract structure",
+      "clarity",
+      "human execution"
+    ]
+  },
+  {
+    "objective_id": "INF1220-TP1-O-03",
+    "type": "drill",
+    "format": "reflective",
+    "prompt": "Given your sum>100 algorithm and input [55,55,55,55], show the first 6 trace lines including all variable values after each line.",
+    "expected_focus": [
+      "trace format",
+      "variable state",
+      "line-by-line execution"
+    ]
+  },
+  {
+    "objective_id": "INF1220-TP1-O-04",
+    "type": "drill",
+    "format": "conceptual",
+    "prompt": "In the provided FizzBuzz pseudocode, what goes wrong at 15? Explain using the IF/ELSE IF structure, then propose a corrected conditional structure.",
+    "expected_focus": [
+      "divisible by both",
+      "branch exclusion",
+      "correct fix"
+    ]
+  },
+  {
+    "objective_id": "INF1220-TP1-O-05",
+    "type": "drill",
+    "format": "short-answer",
+    "prompt": "Name 3 specific inputs between 0 and 100 where the original and corrected FizzBuzz outputs differ, and describe the difference for each.",
+    "expected_focus": [
+      "counterexamples",
+      "comparison",
+      "summarization"
+    ]
+  }
+]
