@@ -1,0 +1,107 @@
+name: Packet (default)
+description: Standard packet issue for ctrlr/external_observer work
+labels:
+  - type:packet
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for packet work items. Add labels for area, phase, plant, domain, and priority.
+  - type: input
+    id: packet_id
+    attributes:
+      label: Packet id
+      description: e.g., packet-ctrlr-01-trace
+      placeholder: packet-ctrlr-01-trace
+    validations:
+      required: true
+  - type: input
+    id: short_summary
+    attributes:
+      label: Short summary
+      placeholder: One-sentence summary of the packet
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: false
+      options:
+        - area:ctrlr
+        - area:external-observer
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      multiple: false
+      options:
+        - phase:contracts
+        - phase:runtime
+        - phase:control
+        - phase:viz
+        - phase:otel
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - prio:P0
+        - prio:P1
+    validations:
+      required: true
+  - type: dropdown
+    id: plant
+    attributes:
+      label: Plant
+      multiple: true
+      options:
+        - plant:repo-work-codex
+        - plant:external-observer
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain (observer only)
+      multiple: false
+      options:
+        - domain:observer-1-controller
+        - n/a
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included in this packet?
+      placeholder: Bullet list of included work
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      placeholder: Anything explicitly excluded
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: Bullet list of exit criteria
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Links or related issues
+      placeholder: Related issues, docs, or context
+    validations:
+      required: false
