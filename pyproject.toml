@@ -7,3 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "pytest>=9.0.2",
 ]
+
+[project.optional-dependencies]
+aux = ["marimo", "pytest", "hypothesis", "snoop", "birdseye"]
+otel = ["opentelemetry-api", "opentelemetry-sdk"]

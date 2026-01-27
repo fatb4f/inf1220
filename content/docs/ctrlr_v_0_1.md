@@ -28,6 +28,8 @@
   - Purpose: render predictive flow and call structure.
 
 ### Auxiliary “rocketships” (optional but high signal)
+- Optional install groups: `aux` (marimo, pytest, hypothesis, snoop, birdseye), `otel` (OpenTelemetry APIs/SDK).
+- Install example: `pip install .[aux]` or `pip install .[otel]`.
 - **marimo** (interactive notebook/app surface)
   - Use: step table, Mermaid rendering, replay controls.
 
@@ -173,4 +175,3 @@ When stuck:
   - “produce a minimal counterexample”
 
 Output should be a Proposal (single change) and success criteria.
-
