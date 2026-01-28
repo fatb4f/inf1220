@@ -74,12 +74,13 @@ Under `.codex/out/<packet_id>/`:
 - optional: JSONL trace (path provided via `jsonl_path`)
 
 ### Evidence completeness checklist (Plant A)
-- `summary.md`
-- `raw/pytest.txt`
-- `raw/uv_sync.txt`
-- `raw/diff.txt`
-- `raw/diffstat.txt`
-- JSONL trace (when applicable)
+- Evidence folder must contain:
+  - `summary.md`
+  - `raw/pytest.txt`
+  - `raw/uv_sync.txt`
+  - `raw/diff.txt`
+  - `raw/diffstat.txt`
+- JSONL trace is optional only when a traced program runs (record the actual filename/path used)
 
 ### Success criteria (Plant A)
 - Diff touches only allowed_paths
@@ -132,7 +133,7 @@ Enter Plant B when any is true:
 
 **Proposal format (example)**
 - Change: fix off-by-one in inner loop
-- Where: `src/algos/insertion_sort.py`
+- Where: `<repo-relative-path under allowed_paths>`
 - Success: invariant holds for all tests; no new failures
 - Rollback: revert last commit
 - Illegal moves: no new deps; no changes outside `src/algos/**`
@@ -156,6 +157,8 @@ It turns ctrlr evidence into:
 - “what else could happen?” (alternatives)
 - “how do I see the flow?” (Mermaid)
 - “how do I fix the next smallest thing?” (manual ABA assist)
+
+Surfacing starts by selecting a `packet_id`, then auto-loads `.codex/out/<packet_id>/raw/*` and a chosen trace path.
 
 ### Feature 1 — Trace Browser (Step Table)
 - Sortable/filterable table over steps/spans
@@ -275,8 +278,8 @@ Example (INF1220: insertion sort)
 - Experiment utilities: `Budget`, `budget(...)`, `seeded(...)`
 - Visualization helpers: `to_mermaid_flow(...)`, `to_mermaid_calltree(...)`
 
-### Proposed fix
-- Add minimal implementations under `src/ctrlr`, with tests and exports
+### v0.2 work item
+- Add minimal implementations under `src/ctrlr`, with tests and exports (via packets)
 
 ### Acceptance criteria
 - `Budget`, `budget`, `seeded` available via `ctrlr` package
