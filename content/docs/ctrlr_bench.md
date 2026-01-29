@@ -29,18 +29,18 @@ It is a **behavioral + usage benchmark** for ctrlr: what exists, how to use it, 
 - **Control gates** (`require(...)`, `ensure(...)`, `invariant(...)` + `CtrlrError`)
   - Make “why it didn’t break” explicit
 
-### v0.2 planned (not implemented yet)
-- **Experiment utilities**: `Budget`, `budget(...)`, `seeded(...)`
+### v0.2 planned (not implemented yet) — **P0**
+- **Experiment utilities (P0)**: `Budget`, `budget(...)`, `seeded(...)`
   - Bounded runs + deterministic reproduction
-- **Visualization**: `to_mermaid_flow(...)`, `to_mermaid_calltree(...)`
+- **Visualization (P0)**: `to_mermaid_flow(...)`, `to_mermaid_calltree(...)`
   - Predictive flow + call structure
 
-### Optional “rocketships” (aux)
+### Tooling required for coursework — **P0**
 - `marimo` — interactive surfacing layer
 - `pytest` — mechanical correctness gate
 - `hypothesis` — controlled exploration / counterexamples
 - `snoop` / `birdseye` — developer-time inspection
-- OpenTelemetry (optional) — propagate Lens context via spans
+- OpenTelemetry (optional) — propagate Lens context via spans (only if you are using spans)
 
 ---
 
